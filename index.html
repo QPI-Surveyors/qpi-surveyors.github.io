@@ -5,36 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QPI Surveyors</title>
     <style>
-        /* Background color and styling */
+        /* Gradient background with shades of purple and navy blue, with white dots for a starry effect */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8; /* Light blue background */
-            color: #333;
+            color: #fff; /* White text for readability */
             margin: 0;
             padding: 0;
+            background: linear-gradient(to bottom, #4b0082, #3c0072, #2c005f, #1c004d, #0b0035); /* Gradient from dark purple to navy */
+            position: relative;
+            overflow: hidden;
         }
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+            border-radius: 10px;
         }
         h1 {
             text-align: center;
-            color: #0077b6; /* Dark blue for title */
+            color: #e0b3ff; /* Light lavender for title */
         }
-        .contact-info {
-            font-size: 1.2em;
-            margin-top: 10px;
+        .contact-info, .section h2 {
+            color: #d1c4e9; /* Light purple for section headings */
         }
         .section {
             margin-bottom: 20px;
         }
-        .contact-item {
-            margin-bottom: 8px;
+        /* Starry effect */
+        .stars {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 200%;
+            background-image: radial-gradient(white 1px, transparent 1px);
+            background-size: 3px 3px;
+            opacity: 0.3;
+            animation: twinkling 20s infinite alternate;
+        }
+        @keyframes twinkling {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-500px); }
         }
     </style>
 </head>
 <body>
+    <div class="stars"></div> <!-- Starry background layer -->
     <div class="container">
         <h1>QPI Surveyors</h1>
 
