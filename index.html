@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QPI Surveyors</title>
     <style>
-        /* Gradient background with shades of purple and navy blue, with white dots for a starry effect */
+        /* Gradient background with shades of purple and navy blue */
         body {
             font-family: Arial, sans-serif;
-            color: #fff; /* White text for readability */
+            color: #ffffff; /* Set text color to white for better visibility */
             margin: 0;
             padding: 0;
             background: linear-gradient(to bottom, #4b0082, #3c0072, #2c005f, #1c004d, #0b0035); /* Gradient from dark purple to navy */
-            position: relative;
-            overflow: hidden;
+            overflow-x: hidden;
         }
         .container {
             width: 80%;
             margin: auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for text readability */
+            background-color: rgba(0, 0, 0, 0.7); /* Darker semi-transparent background for better contrast */
             border-radius: 10px;
+            position: relative;
+            z-index: 1;
         }
         h1 {
             text-align: center;
@@ -34,15 +35,16 @@
         }
         /* Starry effect */
         .stars {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            height: 200%;
+            height: 100%;
             background-image: radial-gradient(white 1px, transparent 1px);
             background-size: 3px 3px;
             opacity: 0.3;
             animation: twinkling 20s infinite alternate;
+            z-index: 0;
         }
         @keyframes twinkling {
             from { transform: translateY(0px); }
