@@ -1,133 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QPI Surveyors</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            color: #ffffff;
+        /* Global Reset */
+        body, h1, h2, p, ul {
             margin: 0;
             padding: 0;
-            background: linear-gradient(to bottom, #4b0082, #3c0072, #2c005f, #1c004d, #0b0035);
-            overflow-x: hidden;
         }
+
+        /* Basic Style */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9; /* Light grey background */
+            color: #333; /* Dark text for better readability */
+            line-height: 1.6;
+        }
+
+        /* Container */
         .container {
-            width: 80%;
-            margin: auto;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-            border-radius: 10px;
-            position: relative;
-            z-index: 1;
         }
-        h1 {
+
+        /* Header */
+        header {
+            background-color: #00aaff; /* Bright color for attention */
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            color: #e0b3ff;
         }
-        .contact-info, .section h2 {
-            color: #d1c4e9;
+
+        .logo {
+            max-width: 150px;
+            margin-bottom: 10px;
         }
-        .section {
+
+        header h1 {
+            font-size: 36px;
+            margin-top: 10px;
+        }
+
+        /* Main Section */
+        .main-section {
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
             margin-bottom: 20px;
         }
-        .logo {
-            display: block;
-            margin: 0 auto;
-            max-width: 150px;
-            height: auto;
+
+        /* Buttons */
+        .cta-button {
+            display: inline-block;
+            background-color: #00aaff;
+            color: white;
+            padding: 15px 30px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
         }
-        .stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: radial-gradient(white 1px, transparent 1px);
-            background-size: 3px 3px;
-            opacity: 0.3;
-            animation: twinkling 20s infinite alternate;
-            z-index: 0;
+
+        .cta-button:hover {
+            background-color: #0077cc;
         }
-        @keyframes twinkling {
-            from { transform: translateY(0px); }
-            to { transform: translateY(-500px); }
-        }
-        .testimonials {
-            background-color: #2c1c61;
+
+        /* Form Style */
+        form {
+            background-color: #f9f9f9;
             padding: 20px;
-            border-radius: 8px;
             margin-top: 20px;
+            border-radius: 8px;
         }
-        .testimonial {
-            font-style: italic;
-            margin-bottom: 10px;
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #00aaff;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0077cc;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .main-section {
+                padding: 30px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="stars"></div>
-    <div class="container">
+
+    <header>
         <img src="logo.png" alt="QPI Surveyors Logo" class="logo">
-
         <h1>QPI Surveyors</h1>
+    </header>
 
-        <div class="section">
-            <h2>About Us</h2>
-            <p>Welcome to QPI Surveyors. We are a team of certified professionals with extensive experience in the surveying industry. Our mission is to deliver precise, accurate, and high-quality results for every project we undertake, whether residential or commercial.</p>
+    <div class="container">
+        <div class="main-section">
+            <h2>About Our Surveying Services</h2>
+            <p>We specialize in high-quality surveying services including boundary surveys, party wall surveys, and topographical mapping. With over 20 years of combined experience, our team is here to ensure accurate and reliable results for your project.</p>
+            <a href="#contact-form" class="cta-button">Get a Free Quote</a>
         </div>
 
-        <div class="section">
-            <h2>Skills and Expertise</h2>
-            <ul>
-                <li>Schedule of Condition Surveys</li>
-                <li>Party Wall Surveys</li>
-                <li>Measurement Surveys</li>
-                <li>CAD Drawings</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>Client Testimonials</h2>
-            <div class="testimonials">
-                <div class="testimonial">"QPI Surveyors provided exceptional service on our commercial property. The team is reliable, professional, and thorough." - Jane Doe, Property Manager</div>
-                <div class="testimonial">"Their accuracy and attention to detail on our residential project were impressive. Highly recommend!" - John Smith, Homeowner</div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>Contact Information</h2>
-            <p>If you'd like to learn more about our services or request a quote, please feel free to reach out to us directly.</p>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <strong>Brian Ross</strong><br>
-                    Email: qpi.hub@outlook.com<br>
-                    Phone: 07429 146366
-                </div>
-                <div class="contact-item">
-                    <strong>Shaekh Khalique</strong><br>
-                    Email: qpi.hub@outlook.com<br>
-                    Phone: 07463 341974
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
+        <div class="main-section" id="contact-form">
             <h2>Contact Us</h2>
             <form method="post" action="https://formspree.io/f/YOUR_FORM_ID">
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" required><br><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
 
-                <button type="submit">Send Message</button>
+                <input type="submit" value="Send Message">
             </form>
         </div>
+
     </div>
+
+    <footer>
+        <p>&copy; 2024 QPI Surveyors | All rights reserved.</p>
+    </footer>
+
 </body>
+
 </html>
